@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  bds:
+    image: itzg/minecraft-bedrock-server
+    environment:
+      EULA: "TRUE"
+      GAMEMODE: survival
+      DIFFICULTY: hard
+      MAX_PLAYERS: 50
+      # Multi-Biome Spawn
+      #LEVEL_SEED: -1266956775
+      # Bamboo Forest
+      LEVEL_SEED: 1960607841
+      # Giant Pillager Tower
+      #LEVEL_SEED: 1256894139
+
+    ports:
+      - 19132:19132/udp
+#      - 39132:39132
+#      - 39132:39132/udp
+#      - 39133:39133
+#      - 39133:39133/udp
+    volumes:
+      - bds:/data
+    stdin_open: true
+    tty: true
+    sysctls:
+      net.ipv4.ip_local_port_range: 39132 39133
+
+volumes:
+  bds: {}
