@@ -8,6 +8,7 @@ services:
       GAMEMODE: survival
       DIFFICULTY: hard
       MAX_PLAYERS: 50
+      VERSION: 1.17.40.06
       # Multi-Biome Spawn
       #LEVEL_SEED: -1266956775
       # Bamboo Forest
